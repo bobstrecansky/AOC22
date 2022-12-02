@@ -9,7 +9,6 @@ import (
 )
 
 func main() {
-
 	file, err := os.Open("input.txt")
 	if err != nil {
 		log.Fatalf("Failed reading File %s", err)

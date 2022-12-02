@@ -8,6 +8,7 @@ import (
 	"strings"
 )
 
+// main - day two part two
 func main() {
 	file, err := os.Open("input.txt")
 	if err != nil {
@@ -32,7 +33,7 @@ func main() {
 
 			// opp is paper, we need rock
 			if opp == "B" {
-				score += 1
+				score++
 			}
 
 			// opp is scissors, we need paper
@@ -46,7 +47,7 @@ func main() {
 			score += 3
 
 			if opp == "A" {
-				score += 1
+				score++
 			}
 			if opp == "B" {
 				score += 2
@@ -54,7 +55,6 @@ func main() {
 			if opp == "C" {
 				score += 3
 			}
-
 		}
 
 		// Need to win
@@ -73,10 +73,9 @@ func main() {
 
 			// opp is scissors, we need rock
 			if opp == "C" {
-				score += 1
+				score++
 			}
 		}
-
 	}
 
 	fmt.Println(score)
